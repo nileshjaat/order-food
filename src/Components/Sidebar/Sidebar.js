@@ -106,7 +106,11 @@ function Sidebar({ handleSetFilters, filterItems, setRestaurantsInfo }) {
                   menuFilters[filter.title].includes(item)
                 }
               />
-              <Label htmlFor={item}>{item}</Label>
+              <Label htmlFor={item}>
+                {item === '3' || item === '4' || item === '4.5'
+                  ? `${item} and above`
+                  : item}
+              </Label>
             </InputContainer>
           ))}
         </Container>
